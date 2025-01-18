@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino 03</title>
+</head>
+<style>
+    /* Variaveis em CSS */
+    :root {
+        --cor0: #4821BF;
+        --cor1: #4F359E;
+        --cor2: #3D00F2;
+        --cor3: #483973;
+        --cor4: #363047;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(167, 206, 243);
+        margin: 0px;
+    }
+    header {
+        background-color: white;
+        padding: 10px;
+        margin: 10px auto;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 7px;
+        /* Short-Hand: direita, baixo, embaçamento e cor*/
+        box-shadow: 2px 2px 3px 1px rgba(0, 0, 0, 0.247);
+    }
+    h1 {
+        color: var(--cor0);
+        text-align: center;
+        text-decoration: underline;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.336);
+    }
+    nav {
+        background-color: rgba(209, 207, 207, 0.829);
+        padding: 2px;
+        margin: 2px;
+        text-align: center;
+        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.205);
+        text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.336);
+    }
+    nav > a {
+       color: rgb(72, 35, 175);
+       text-decoration: none;
+       font-weight: bold;
+    }
+    nav > a:hover {
+        text-decoration: underline;
+    }
+    nav > a::before {
+        content: '> ';
+    }
+    nav > a::after {
+        content: ' <';
+    }
+    main {
+        background-color: white;
+        padding: 10px;
+        margin: 10px auto;
+        border: 2px solid black ;
+        border-radius: 7px;
+        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.247);
+        min-width: 400px;
+        max-width: 800px;
+    }
+    section {
+        padding: 10px;
+        margin: 10px;
+        text-align: justify;
+        border: 2px solid black;
+        line-height: 1.5em;
+    }
+    h2 {
+        color: var(--cor3);
+        text-align: center;
+        text-decoration: underline;
+        text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.336);
+    }
+    aside {
+        text-align: justify;
+        background-color: rgba(209, 207, 207, 0.829) ;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid black;
+        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.281);
+        line-height: 2.0em;
+    }
+    #listas{
+        columns: 2;
+        border: 1px dashed black;
+    }
+    footer {
+        background-color: rgb(17, 0, 255);
+        color: white;
+        text-align: center;
+        padding: 1px;
+        margin: 0px;
+    }
+</style>
+<body>
+    <header>
+        <h1>Treino 03</h1>
+        <nav>
+            <a href="#">Principal</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Titulo secundario</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet laboriosam fugit ex repellendus nisi alias aspernatur, eum deleniti maxime culpa illo ipsa consequuntur, excepturi quisquam nulla magnam. Magnam, consequuntur sapiente.
+            </article>
+            <article>
+                <h2>Tititulo Terciario</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam itaque libero animi, obcaecati repellat nostrum eum eaque quibusdam ex quia. Harum, illo illum. Tenetur, deleniti fugiat voluptatem quibusdam quidem eaque.
+                <aside>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nam quia dolorem corporis exercitationem aliquid sunt molestiae magni rerum dolores veritatis, sapiente adipisci aut saepe omnis pariatur ea maiores debitis.
+                </aside>
+                <aside id="listas">
+                     <ul>
+                        <li>1.5 - Cupcake</li>
+                        <li>1.6 - Donut</li>
+                        <li>3.0 - Eclair</li>
+                        <li>2.2 - Froyo</li>
+                        <li>2.3 - Gingerbread</li>
+                        <li>3.0 - Honeycomb</li>
+                     </ul>
+               </aside>
+            </article>
+        </section>
+        <aside>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium placeat qui iste nemo quae dignissimos et at similique inventore! Necessitatibus, explicabo harum dicta ipsam vitae voluptas nesciunt ipsa natus doloremque.
+        </aside>
+    </main>
+    <footer>
+        <p>Desenvolvido por Nicolas Samora</p>
+    </footer>
+</body>
+</html>
