@@ -7,28 +7,39 @@
     <style>
         body {
             margin: 0px;
-            width: 100vh;
-            background: gray url('../imagens/wallpaper003.jpg') center center no-repeat fixed;
+            height: 100vh;
+            background: gray url('imagens/pattern002.png') center center no-repeat fixed;
             background-size: cover;
 
         }
         div.qdr {
+            position: relative;
             display: inline-block;
             margin: 5px;
             border: 2px solid black;
-            width: 300px;
-            height: 300px;
+            width: 100px;
+            height: 100px;
         }
         #q1 {
             background-color: blue;
+            position:absolute;
+            left: 90%;
+            top: 80%;
             
         }
         #q2 {
             background-image: linear-gradient(to left, blue, yellow);
+            position: absolute;
+            left: 90%;
         }
         #q3 {
-            background-image: url('../imagens/wallpaper001.jpg');
+            background-image: url('imagens/pattern001.png');
             background-position: center center;
+            position: absolute;
+            top: 80%;
+        }
+        #q4 {
+            background-image: url(imagens/pattern003.png);
         }
     </style>
 </head>
@@ -36,5 +47,6 @@
     <div class="qdr" id="q1"></div>
     <div class="qdr" id="q2"></div>
     <div class="qdr" id="q3"></div>
+    <div class="qdr" id="q4"></div>
 </body>
 </html>
