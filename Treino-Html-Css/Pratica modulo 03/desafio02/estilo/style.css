@@ -17,7 +17,7 @@
 }
 
 html, body {
-    min-height: 100vh;
+    min-height: 100vh; /* Pegar 100% da viewport (Do inicio do conteudo até o final sem sobra) */
     background-color: rgb(184, 181, 181);
     font-family: var(--font01);
 }
@@ -46,16 +46,16 @@ a {
 }
 
 section {
-    padding-top: 10vh;
+    padding-top: 10vh; /* Padding-top e bottom ocupando 10% da view height da section */
     padding-bottom: 10vh;
-    line-height: 2em;
-    padding-left: 30px;
+    line-height: 2em; /* Dar um espaço entre as frases multiplicando seu "espaço" com em */
+    padding-left: 30px; /* Padding usado para que o conteudo não fique no canto da tela */
     font-family: var(--font03);
-    font-size: 3.5vw;
+    font-size: 3.5vw; /* Font adaptada para que ocupe 3.5% da largura da tela, fazendo com que as letras fiquem responsivas de acordo com o tamanho da tela */
 }
 
 section p {
-    padding-bottom: 2em;
+    padding-bottom: 2em; /* padding dos paragrafos aumentado 2x o tamanho original */
 }
 
 a:hover {
@@ -77,7 +77,7 @@ a:hover {
 
 .imagem p {
     background-color: rgba(0, 0, 0, 0.192);
-    display: inline-block;
+    display: inline-block; /* inline-level para que o background ocupe apenas o tamanho da estrofe */
     padding: 7px;
     text-shadow: 1px 1px 0px black;
 }
