@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid black;
+            padding: 8px;
+            line-height: 1.5em;
+            background-color: rgb(248, 244, 210);
+
+        }
+
+        .num {
+            text-align: center;
+        }
+
+        .cabeca {
+            background-color: black;
+            color: white;
+            font-weight: normal;
+        }
+
+        .pe {
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-weight: normal;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Treino Tabelas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th class="cabeca">Região</th>
+                <th class="cabeca">Estados</th>
+                <th class="cabeca">Municipios</th>
+                <th class="cabeca">População</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Norte</th>
+                <td>Acre <br> Amapá <br> Amazonas <br> Pará <br> Rondônia <br> Roraima <br> Tocantins</td>
+
+                <td class="num">450</td>
+                <td class="num">17 354 884</td>
+            </tr>
+            <tr>
+                <th>Nordeste</th>
+                <td>Alagoas <br> Bahia <br> Ceará <br> Maranhão <br> Paraiba <br> Pernambuco <br> Piaui <br> Rio Grande do Norte <br> Sergipe</td>
+                <td class="num">1.793</td>
+                <td class="num">54.658.515</td>
+            </tr>
+            <tr>
+                <th>Centro-Oeste</th>
+                <td>Distrito Federal <br> Goaiás <br> Mato Grosso <br> Mato Grosso do Sul </td>
+                <td class="num">467</td>
+                <td class="num">16.289.538</td>
+            </tr>
+            <tr>
+                <th>Sudeste</th>
+                <td>Espirito Santo <br> Minas Gerais <br> Rio de Janeiro <br> São Paulo</td>
+                <td class="num">1.668</td>
+                <td class="num">84.840.113</td>
+            </tr>
+            <tr>
+                <th>Sul</th>
+                <td>Paraná <br> Santa Catarina <br> Rio Grande do Sul</td>
+                <td class="num">1.191</td>
+                <td class="num">29.937.706</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th class="pe">Brasil</th>
+            <td class="pe">26 e um distrito federal</td>
+            <td class="pe">5.570</td>
+            <td class="pe">203.080.756</td>
+        </tfoot>
+    </table>
+</body>
+</html>
