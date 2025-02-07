@@ -15,12 +15,22 @@
             border-collapse: collapse;
         }
 
+        caption {
+            font-size: 1.5em;
+            padding: 5px;
+        }
+
         td, th {
             border: 1px solid black;
             padding: 8px;
             line-height: 1.5em;
             background-color: rgb(248, 244, 210);
 
+        }
+
+        tbody :nth-child(odd) {
+            background-color: rgb(255, 255, 255);
+            font-style: italic;
         }
 
         .num {
@@ -45,49 +55,50 @@
 <body>
     <h1>Treino Tabelas</h1>
     <table>
+        <caption>População Brasileira</caption>
         <thead>
             <tr>
-                <th class="cabeca">Região</th>
-                <th class="cabeca">Estados</th>
-                <th class="cabeca">Municipios</th>
-                <th class="cabeca">População</th>
+                <th scope="col" class="cabeca">Região</th>
+                <th scope="col" class="cabeca">Estados</th>
+                <th scope="col" class="cabeca">Municipios</th>
+                <th scope="col" class="cabeca">População</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th>Norte</th>
+                <th scope="row">Norte</th>
                 <td>Acre <br> Amapá <br> Amazonas <br> Pará <br> Rondônia <br> Roraima <br> Tocantins</td>
 
                 <td class="num">450</td>
                 <td class="num">17 354 884</td>
             </tr>
             <tr>
-                <th>Nordeste</th>
+                <th scope="row">Nordeste</th>
                 <td>Alagoas <br> Bahia <br> Ceará <br> Maranhão <br> Paraiba <br> Pernambuco <br> Piaui <br> Rio Grande do Norte <br> Sergipe</td>
                 <td class="num">1.793</td>
                 <td class="num">54.658.515</td>
             </tr>
             <tr>
-                <th>Centro-Oeste</th>
+                <th scope="row">Centro-Oeste</th>
                 <td>Distrito Federal <br> Goaiás <br> Mato Grosso <br> Mato Grosso do Sul </td>
                 <td class="num">467</td>
                 <td class="num">16.289.538</td>
             </tr>
             <tr>
-                <th>Sudeste</th>
+                <th scope="row">Sudeste</th>
                 <td>Espirito Santo <br> Minas Gerais <br> Rio de Janeiro <br> São Paulo</td>
                 <td class="num">1.668</td>
                 <td class="num">84.840.113</td>
             </tr>
             <tr>
-                <th>Sul</th>
+                <th scope="row">Sul</th>
                 <td>Paraná <br> Santa Catarina <br> Rio Grande do Sul</td>
                 <td class="num">1.191</td>
                 <td class="num">29.937.706</td>
             </tr>
         </tbody>
         <tfoot>
-            <th class="pe">Brasil</th>
+            <th scope="row" class="pe">Brasil</th>
             <td class="pe">26 e um distrito federal</td>
             <td class="pe">5.570</td>
             <td class="pe">203.080.756</td>
