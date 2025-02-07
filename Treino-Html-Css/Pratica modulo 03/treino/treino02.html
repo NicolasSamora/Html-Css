@@ -13,6 +13,12 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
+        }
+
+        thead {
+            position: sticky;
+            top: -1px;
         }
 
         caption {
@@ -49,7 +55,7 @@
             color: white;
             font-weight: normal;
         }
-
+        
     </style>
 </head>
 <body>
@@ -69,8 +75,8 @@
                 <th scope="row">Norte</th>
                 <td>Acre <br> Amapá <br> Amazonas <br> Pará <br> Rondônia <br> Roraima <br> Tocantins</td>
 
-                <td class="num">450</td>
-                <td class="num">17 354 884</td>
+                <td colspan="2" class="num">450</td>
+
             </tr>
             <tr>
                 <th scope="row">Nordeste</th>
@@ -81,13 +87,13 @@
             <tr>
                 <th scope="row">Centro-Oeste</th>
                 <td>Distrito Federal <br> Goaiás <br> Mato Grosso <br> Mato Grosso do Sul </td>
-                <td class="num">467</td>
+                <td rowspan="2" class="num">467</td>
                 <td class="num">16.289.538</td>
             </tr>
             <tr>
                 <th scope="row">Sudeste</th>
                 <td>Espirito Santo <br> Minas Gerais <br> Rio de Janeiro <br> São Paulo</td>
-                <td class="num">1.668</td>
+            
                 <td class="num">84.840.113</td>
             </tr>
             <tr>
