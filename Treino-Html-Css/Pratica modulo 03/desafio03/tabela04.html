@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Tabela Pokemon</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+        caption {
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 5px;
+        }
+        thead {
+            position: sticky;
+            top: -1px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        td {
+            text-align: center;
+        }
+        th {
+            background-color: rgb(185, 17, 17);
+            color: white;
+        }
+        tbody tr:nth-child(even) {
+            background-color: rgb(248, 166, 166);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <table>
+            <caption>Pokemon e seus Tipos, Fraquezas e Vantagens</caption>
+            <thead>
+                <tr>
+                    <th style="width: 100px;" scope="col">Tipo</th>
+                    <th scope="col">Vantagem</th>
+                    <th scope="col">Desvantagem</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">Aço</th>
+                    <td>Fada, Gelo, Pedra</td>
+                    <td>Fogo, Terra, Lutador</td>
+                </tr>
+                <tr>
+                    <th scope="row">Água</th>
+                    <td>Fogo, Terra, Pedra</td>
+                    <td>Elétrico, Folha</td>
+                </tr>
+                <tr>
+                    <th scope="row">Dragão</th>
+                    <td>Dragão</td>
+                    <td>Dragão, Fada, Gelo</td>
+                </tr>
+                <tr>
+                    <th scope="row">Elétrico</th>
+                    <td>Água, Voador</td>
+                    <td>Terra</td>
+                </tr>
+                <tr>
+                    <th scope="row">Fada</th>
+                    <td>Dragão, Lutador, Dark</td>
+                    <td>Aço, Venenoso</td>
+                </tr>
+                <tr>
+                    <th scope="row">Fantasma</th>
+                    <td>Fantasma, Psiquico</td>
+                    <td>Fantasma, Dark</td>
+                </tr>
+                <tr>
+                    <th scope="row">Fogo</th>
+                    <td>Aço, Planta, Gelo, Inseto</td>
+                    <td>Água, Terra, Pedra</td>
+                </tr>
+                <tr>
+                    <th scope="row">Gelo</th>
+                    <td>Dragão, Planta, Terra, Voador</td>
+                    <td>Aço, Fogo, Lutador, Pedra</td>
+                </tr>
+                <tr>
+                    <th scope="row">Inseto</th>
+                    <td>Planta, Psiquico, Dark</td>
+                    <td>Fogo, Pedra, Voador</td>
+                </tr>
+                <tr>
+                    <th scope="row">Lutador</th>
+                    <td>Aço, Gelo, Normal, Pedra, Dark</td>
+                    <td>Fada, Psiquico, Voador</td>
+                </tr>
+                <tr>
+                    <th scope="row">Normal</th>
+                    <td>-</td>
+                    <td>Lutador</td>
+                </tr>
+                <tr>
+                    <th scope="row">Pedra</th>
+                    <td>Fogo, Gelo, Inseto, Voador</td>
+                    <td>Aço, Água, Lutador, Planta, Terra</td>
+                </tr>
+                <tr>
+                    <th scope="row">Planta</th>
+                    <td>Água, Terra, Pedra</td>
+                    <td>Gelo, Fogo, Inseto, Venenoso, Voador</td>
+                </tr>
+                <tr>
+                    <th scope="row">Psiquico</th>
+                    <td>Lutador, Venenoso</td>
+                    <td>Inseto, Fantasma, Dark</td>
+                </tr>
+                <tr>
+                    <th scope="row">Dark</th>
+                    <td>Fantasma, Psiquico</td>
+                    <td>Fada, Inseto, Lutador</td>
+                </tr>
+                <tr>
+                    <th scope="row">Terra</th>
+                    <td>Aço, Elétrico, Fogo, Pedra, Venenoso</td>
+                    <td>Água, Gelo, Planta</td>
+                </tr>
+                <tr>
+                    <th scope="row">Venenoso</th>
+                    <td>Fada, Planta</td>
+                    <td>Psiquico, Terra</td>
+                </tr>
+                <tr>
+                    <th scope="row">Voador</th>
+                    <td>Inseto, Lutador, Planta</td>
+                    <td>Elétrico, Gelo, Pedra</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
