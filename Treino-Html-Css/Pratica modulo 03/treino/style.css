@@ -1,9 +1,16 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box; /* Garante que padding e bordas não causem overflow */
+}
 body {
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    min-height: 100vh;
+    overflow-x: hidden;
 
     /* Word-wrap e Overflow-wrap: 
     
@@ -29,7 +36,7 @@ main {
 .container {
     width: 100%; /* Largura do container de 100%* da tela*/
 
-    max-width: 700px; /* Larugura maxima que pode chegar, fazendo ficar responsivo pra outros dispositivos*/
+    max-width: 700px; /* Larugura maxima que pode chegar, fazendo ficar responsivo pra outros dispositivos */
 
     margin: 0 auto;
 
@@ -69,8 +76,7 @@ section.modulo.parallax {
     width: 100%; /* Usado para que a imagem pegue 100% da largura */
 
     position: relative;
-    overflow: hidden;
-    background-position: 50% 50%;
+    background-position: center ;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -86,9 +92,11 @@ section.modulo.parallax::after {
     content: ""; /* Usado pois não sera usado escrita, será apenas o degradê */
     height: 100%;
     width: 100%;
-    position: absolute;
-    z-index: 8;
-    background: linear-gradient(to bottom, /*cima*/ rgba(0,0,0,0) 0, /*baixo*/ rgba(0,0,0,0) /*opacidade*/40%, /*cor*/ #000 100% );
+    position: absolute; /* Usado para deixar o titulo em sua posição absoluta/meio */
+
+    z-index: 8; /* define a ordem de empilhamento dos elementos na tela, ou seja, a ordem em que os elementos aparecem */
+
+    background: linear-gradient(to bottom, /*cima*/ rgba(0,0,0,0) 0, /*baixo*/ rgba(0,0,0,0) /*opacidade*/40%, /*cor*/ #0000008a 100% );
 
     /* Degradê em outros navegadores */
     background: -moz-linear-gradient(to bottom, /*cima*/ rgba(0,0,0,0) 0, /*baixo*/ rgba(0,0,0,0) /*opacidade*/40%, /*cor*/ #000 100% );
@@ -104,11 +112,59 @@ section.modulo.parallax1 {
 section.modulo.parallax h1 {
     color: white;
     text-align: center;
+
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.377); /* primeiro valor: posicionamento da sombra a direita, Segundo valor: posicionamento da sombra abaixo, Terceiro valor: Embaraçamento da sombra*/
+
     font-size: 78px;
-    z-index: 50;
-    text-transform: uppercase;
+    z-index: 50; /* define a ordem de empilhamento dos elementos na tela, ou seja, a ordem em que os elementos aparecem */
+
+    text-transform: uppercase; /* Transformar o texto em caixa auta ( A B C ) */
 }
 
 section.modulo.parallax2 {
     background-image: url(imagens/background002.jpg);
 }
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    section.modulo.parallax h1 {
+        font-size: 50px; /* Ajusta o tamanho do texto em telas menores */
+    }
+
+    .container {
+        padding: 0 15px; /* Reduz o padding lateral em telas pequenas */
+    }
+
+    section.modulo h2 {
+        font-size: 24px; /* Ajusta o tamanho do h2 em telas menores */
+    }
+}
+
+/* Explicação da parte de responsividade:
+
+1. Uso do @media (max-width: 768px) 
+
+Esse trecho de código é uma consulta de mídia (@media) que é usada para aplicar estilos CSS específicos dependendo das características do dispositivo ou da tela. No caso, o max-width: 768px indica que essas regras vão ser aplicadas quando a largura da tela for menor ou igual a 768px, o que é típico de dispositivos móveis ou telas pequenas.
+------------------------------------------------------------------------------------------------------------------------------------------------
+2. Modificação do tamanho da fonte para o <h1> dentro de section.modulo.parallax
+
+Objetivo: O tamanho da fonte do título <h1> foi reduzido de 78px (como estava no código original) para 48px quando a largura da tela for menor ou igual a 768px.
+
+Por quê? Em telas menores, como smartphones ou tablets, o texto pode ficar muito grande, o que pode prejudicar a legibilidade ou fazer com que o título ocupe mais espaço do que a tela comporta. Reduzindo o tamanho da fonte, conseguimos melhorar a legibilidade e evitar que o conteúdo "escape" da tela ou cause overflow.
+
+Para o <h2> dentro de section.modulo:
+
+Objetivo: O tamanho da fonte do <h2> foi ajustado de 30px (original) para 24px
+
+Por quê? O <h2> também pode acabar ficando grande demais em telas pequenas. A redução de tamanho do texto ajuda a manter o design equilibrado e evita que o título ultrapasse os limites da tela.
+------------------------------------------------------------------------------------------------------------------------------------------------
+3. Modificação do padding do .container
+
+Objetivo: O padding do contêiner foi reduzido de 20px para 15px nas laterais (esquerda e direita) em telas pequenas.
+
+Por quê? O padding é o espaço interno ao redor do conteúdo de um elemento. Em telas pequenas, o espaço lateral pode ser mais limitado, e reduzir o padding permite que o conteúdo ocupe mais espaço útil da tela, sem afetar muito a estética e sem comprometer o layout. Isso ajuda a garantir que o conteúdo não ultrapasse os limites da tela e evita o rolamento lateral.
+------------------------------------------------------------------------------------------------------------------------------------------------
+4. Como funciona o @media?
+
+O bloco @media (max-width: 768px) só será aplicado quando a largura da tela do dispositivo for menor ou igual a 768px, ou seja, em smartphones e dispositivos móveis. Se o usuário estiver em uma tela maior, como em um desktop ou tablet em modo paisagem, as regras dentro dessa consulta de mídia não serão aplicadas, e o layout padrão será utilizado.
+
+*/
