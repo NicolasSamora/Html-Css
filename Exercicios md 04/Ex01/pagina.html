@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de texte</title>
+    <style>
+        *,
+*::before,
+*::after {
+    box-sizing: border-box; /* Garante que padding e bordas não causem overflow */
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    /* Word-wrap e Overflow-wrap: 
+    
+    Usado para quando o container chegar no final de sua largura o texto quebrar sem aumentar o tamanho do container e quebrar sua largura atual */
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: bold;
+    color: black;
+}
+
+.principal {
+    width: 100%; /* largura de 100% da tela*/
+
+    margin: 0 auto; /* 0 de margim em cima e embaixo, e automatica na esquerda e direita */
+}
+
+main {
+    display: block;
+    background-color: white;
+}
+
+.container {
+    width: 100%; /* Largura do container de 100%* da tela*/
+
+    max-width: 700px; /* Larugura maxima que pode chegar, fazendo ficar responsivo pra outros dispositivos */
+
+    margin: 0 auto;
+
+    padding: 0 20px; /* 0 de padding em baixo e em cima, e 20px na esquerda e direita*/
+}
+
+section.modulo p {
+    margin-bottom: 40px; /* margin usada para dar um espaço entre os parágrafos */
+}
+
+section.modulo:last-child { 
+    margin-bottom: 0px; /* Margin tirada apenas do ultimo item, nos outros continuara tendo os 40px */
+
+    /* last-child: Acessar o ultimo item(filho) */
+}
+
+section.modulo h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+section.modulo.content {
+    padding: 40px 0px; /* padding de 40px em cima e em baixo, e 0 nas laterais */
+
+    background-color: #ece7d5;
+}
+
+section.modulo.parallax {
+    display: flex; /* Deixa o conteudo flexivel pra mudar sua posição */
+
+    flex-direction: column; /* Flex-direction: column, Usado para o texto ou titulo, fique na posição de uma coluna(posição normal) */
+
+    justify-content: center; /* Usado em conjunto do Flex-direction, fazendo com que o texto/titulo continue na posição de coluna, só que no meio(center-left) */
+
+    height: 100vh !important; /* Usado para que o h1 ocupe 100% da altura da viewport, já o !important, é usado para forçar o uso 100% da vh */
+
+    width: 100%; /* Usado para que a imagem pegue 100% da largura */
+
+    position: relative;
+    background-position: center ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    /* Parallax em outros navegadores */
+    -webkit-background-size: cover; 
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+}
+
+section.modulo.parallax::after {
+    content: ""; /* Usado pois não sera usado escrita, será apenas o degradê */
+    height: 100%;
+    width: 100%;
+    position: absolute; /* Usado para deixar o titulo em sua posição absoluta/meio */
+
+    z-index: 8; /* define a ordem de empilhamento dos elementos na tela, ou seja, a ordem em que os elementos aparecem */
+
+    background: linear-gradient(to bottom, /*cima*/ rgba(0,0,0,0) 0, /*baixo*/ rgba(0,0,0,0) /*opacidade*/40%, /*cor*/ #0000008a 100% );
+
+    /* Degradê em outros navegadores */
+    background: -moz-linear-gradient(to bottom, /*cima*/ rgba(0,0,0,0) 0, /*baixo*/ rgba(0,0,0,0) /*opacidade*/40%, /*cor*/ #000 100% );
+    background: -webkit-linear-gradient(to bottom, /*cima*/ rgba(0,0,0,0) 0, /*baixo*/ rgba(0,0,0,0) /*opacidade*/40%, /*cor*/ #000 100%);
+    background: -o-linear-gradient(to bottom, /*cima*/ rgba(0,0,0,0) 0, /*baixo*/ rgba(0,0,0,0) /*opacidade*/40%, /*cor*/ #000 100% );;
+}
+
+
+section.modulo.parallax1 {
+    background-image: url(imagens/wallpaper002.jpg);
+}
+
+section.modulo.parallax h1 {
+    color: white;
+    text-align: center;
+
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.377); /* primeiro valor: posicionamento da sombra a direita, Segundo valor: posicionamento da sombra abaixo, Terceiro valor: Embaraçamento da sombra*/
+
+    font-size: 78px;
+    z-index: 50; /* define a ordem de empilhamento dos elementos na tela, ou seja, a ordem em que os elementos aparecem */
+
+    text-transform: uppercase; /* Transformar o texto em caixa auta ( A B C ) */
+}
+
+section.modulo.parallax2 {
+    background-image: url(imagens/background002.jpg);
+}
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    section.modulo.parallax h1 {
+        font-size: 50px; /* Ajusta o tamanho do texto em telas menores */
+    }
+
+    .container {
+        padding: 0 15px; /* Reduz o padding lateral em telas pequenas */
+    }
+
+    section.modulo h2 {
+        font-size: 24px; /* Ajusta o tamanho do h2 em telas menores */
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="principal">
+        <main>
+            <section class="modulo parallax parallax1">
+                <h1>Treino Parallax</h1>
+            </section>
+            <section class="modulo content">
+                <div class="container">
+                    <h2>Texto qualquer...</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae id quos assumenda tenetur recusandae qui officia cum dolorem laudantium magni facilis, commodi, et quo sequi repellendus. Vitae ullam nihil nisi!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quam cum debitis, repellendus excepturi dicta quo aspernatur, delectus perferendis dolor a in dolores fuga itaque eius eos hic officiis voluptatibus.</p>
+                </div>
+            </section>
+            <section class="modulo parallax parallax2">
+                <h1>Treino Parallax</h1>
+            </section>
+            <section class="modulo content">
+                <div class="container">
+                    <h2>Texto qualquer...</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae id quos assumenda tenetur recusandae qui officia cum dolorem laudantium magni facilis, commodi, et quo sequi repellendus. Vitae ullam nihil nisi!</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo quam cum debitis, repellendus excepturi dicta quo aspernatur, delectus perferendis dolor a in dolores fuga itaque eius eos hic officiis voluptatibus.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
