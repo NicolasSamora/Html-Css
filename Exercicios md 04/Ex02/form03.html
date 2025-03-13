@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos GET e POST para formularios</title>
+</head>
+<body>
+    <h1>Formulario basico</h1>
+    <form action="cadastro.js" method="post"> <!-- Local pra onde os dados vão -->
+
+        <!-- Post = Os dados não aparecem na URL -->
+        <!-- Get = Os dados aparecem na URL -->
+        
+        <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p>
+
+        <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
