@@ -6,12 +6,12 @@
     <title>As multiplas faces do input</title>
 </head>
 <body>
-    <form action="cadastro.js" method="get">
+    <form action="cadastro.js" method="post" autocomplete="on">
         <p><label for="ifoto">Foto de Perfil: </label><input type="file" name="foto" id="ifoto" accept="image/*"></p> 
-        <!-- Campo do tipo file, para o visitante fazer upload de arquivos em qual quer formato. O atributo accept para limitar o upload a arquivos de imagem -->
+        <!-- Campo do tipo file, para o visitante fazer upload de arquivos em qual quer formato. O atributo accept para limitar o upload a arquivos de imagem.-->
 
-        <p><label for="iidade">Idade: </label><input type="number" name="idade" id="iidade" min="1" max="120" value="0"></p>
-        <!--Campo do tipo number para criar uma caixa só pra numeros, os atributos min e max para definir os limites aceitos, o atributo value para sugerir um valor inicial-->
+        <p><label for="iidade">Idade: </label><input type="number" name="idade" id="iidade" min="1" max="100" value="0" required></p>
+        <!--Campo do tipo number para criar uma caixa só pra numeros, os atributos min e max para definir os limites aceitos, o atributo value para sugerir um valor inicial.Atributo required é usado para dizer que é obrigatório o preenchimento do campo-->
 
         <p><fieldset style="width: 100px;">
             <legend>Sexo</legend>
@@ -22,8 +22,8 @@
         </fieldset></p>
         <!--As linhas 16 até 22 definem um grupo de campos na forma de um <fieldset> e permite usar a tag <legend> para descrever qual será o texto que identifica o grupo. Os botões de radio possuem os mesmo "name" pra indicar que os dois são do mesmo grupo a ser selecionado. O checked é usado para que o primeiro ja apareca pressionado-->
 
-        <p><label for="itel">Telefone: </label><input type="tel" name="tel" id="itel" pattern="\([0-9] {2}\) ([\s]) [0-9] {4,6}-[0-9] {4}" placeholder="(XX) XXXX-XXXX"></p>
-        <!--Campo do tipo tel para ler numeros de telefone no atributo "pattern" configuramos uma expressão regular pra definir qual será o formato aceito para o valor, já o atributo "placeholder" vai configurar uma "dica" para que o visitante saiba qual é o formato que será usado pra informar o telefone
+        <p><label for="itel">Telefone: </label><input type="tel" name="tel" id="itel" pattern="\([0-9] {2}\) ([\s]) [0-9] {4,6}-[0-9] {4}" placeholder="(XX) XXXX-XXXX" required autocomplete="tel"></p>
+        <!--Campo do tipo tel para ler numeros de telefone no atributo "pattern" configuramos uma expressão regular pra definir qual será o formato aceito para o valor, já o atributo "placeholder" vai configurar uma "dica" para que o visitante saiba qual é o formato que será usado pra informar o telefone.
         
         \([0-9] {2}\) Vai indicar que é necessario colocar dois digitos de 0 a 9 entre parênteses
         
@@ -33,13 +33,13 @@
         
         [0-9] {4} O numero se encerra com 4 digitos entre 0 e 9-->
 
-        <p><label for="imail">E-mail: </label><input type="email" name="email" id="imail" size="30" maxlength="50"></p>
+        <p><label for="imail">E-mail: </label><input type="email" name="email" id="imail" size="30" maxlength="50" required autocomplete="email"></p>
         <!--Campo do tipo email , ele vai exigir o uso do "@" se não, não sera valido. O maxlenght configura o tamanho maximo de caracteres que pode ter. O size configura o tamanho da caixa para exibir tantas caracteres por vez (nesse caso 30)-->
 
-        <p><label for="isenha">Senha: </label><input type="password" name="senha" id="isenha" minlength="3" maxlength="8" size="8"></p>
+        <p><label for="isenha">Senha: </label><input type="password" name="senha" id="isenha" minlength="3" maxlength="8" size="8" required autocomplete="current-password"></p>
         <!--Campo do tipo password, os atributos minlenght e maxlenght vão indicar que a senha vai ter entre (nesse caso 3 e 8) caracteres-->
 
-        <p><label for="imes">Mês: </label><input type="month" name="mes" id="imes"></p>
+        <p><label for="imes">Mês: </label><input type="month" name="mes" id="imes" required autocomplete="bday-month"></p>
         <!--Campo do tipo month, para criar um formulario pra escolher o mes e ano-->
 
         <p><label for="idata">Data da compra: </label><input type="date" name="data" id="idata"></p>
@@ -54,7 +54,7 @@
         <p><label for="isat">Nivel de Satisfação: </label><input type="range" name="sat" id="isat" min="0" max="5" value="0"></p>
         <!--Campo do tipo range, exibido como uma pequena barra horizontal com um controle deslizante. Os atributos max e min para definir os limites e o value para indicar qual sera o valor inicial-->
 
-        <p><label for="iaceito">Aceito os <a href="termos.html"></a>Termos de uso</label><input type="checkbox" name="aceito" id="iaceito"></p>
+        <p><label for="iaceito">Aceito os <a href="termos.html"></a>Termos de uso</label><input type="checkbox" name="aceito" id="iaceito" required></p>
         <!--Campo do tipo checkbox, que se diferem dos botões de radio porque podem ter varios itens selecionados dentro de um mesmo grupo-->
 
         <p><input type="submit" value="Enviar"></p>
