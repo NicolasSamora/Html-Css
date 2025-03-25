@@ -13,6 +13,9 @@
         <p><label for="iidade">Idade: </label><input type="number" name="idade" id="iidade" min="1" max="100" value="0" required></p>
         <!--Campo do tipo number para criar uma caixa só pra numeros, os atributos min e max para definir os limites aceitos, o atributo value para sugerir um valor inicial.Atributo required é usado para dizer que é obrigatório o preenchimento do campo-->
 
+        <p><label for="imedia">Média: </label><input type="number" min="0" max="10" step="0.1" value="0"></p>
+        <!-- Atributo step, ele faz com que seja possivel o uso de numeros quebrados, por exemplo: 5,2 4,5 etc; Nele é possivel definir de quanto pode "passar" por exemplo: step= 0.5 = 0.5, 1, 1.5, 2, 2.5 etc.. Se deixar no 0.1 ele vai de 1 em 1 -->
+
         <p><fieldset style="width: 100px;">
             <legend>Sexo</legend>
             <input type="radio" name="sex" id="isexmasc" checked>
@@ -22,7 +25,7 @@
         </fieldset></p>
         <!--As linhas 16 até 22 definem um grupo de campos na forma de um <fieldset> e permite usar a tag <legend> para descrever qual será o texto que identifica o grupo. Os botões de radio possuem os mesmo "name" pra indicar que os dois são do mesmo grupo a ser selecionado. O checked é usado para que o primeiro ja apareca pressionado-->
 
-        <p><label for="itel">Telefone: </label><input type="tel" name="tel" id="itel" pattern="\([0-9] {2}\) ([\s]) [0-9] {4,6}-[0-9] {4}" placeholder="(XX) XXXX-XXXX" required autocomplete="tel"></p>
+        <p><label for="itel">Telefone: </label><input type="tel" name="tel" id="itel" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(XX)XXXX-XXXX" required autocomplete="tel"></p>
         <!--Campo do tipo tel para ler numeros de telefone no atributo "pattern" configuramos uma expressão regular pra definir qual será o formato aceito para o valor, já o atributo "placeholder" vai configurar uma "dica" para que o visitante saiba qual é o formato que será usado pra informar o telefone.
         
         \([0-9] {2}\) Vai indicar que é necessario colocar dois digitos de 0 a 9 entre parênteses
