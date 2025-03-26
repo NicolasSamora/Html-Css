@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Option, Select, Textarea e Datalist</title>
+</head>
+<body>
+    <h1>Formularios com Option</h1>
+    <form action="cadastro.js" method="get">
+    <p><label for="imod">Modelo do celular:</label>
+    <select name="mod" id="imod">
+        <option value="">Escolha...</option>
+        <optgroup label="Apple">
+            <option value="AIP1132">iPhone 11 32GB</option>
+            <option value="AIP11P64">iPhone 11 Pro 64GB</option>
+            <option value="AIP11PM256">iPhone 11 Pro Max 256GB</option>
+        </optgroup>
+        <optgroup label="Sansung">
+            <option value="SGXYS10">Galaxy S10 Lite</option>
+            <option value="SGXYS20U128">Galaxy S20 Ultra 128GB</option>
+            <option value="SGXYN10256">Galaxy Note10 256GB</option>
+        </optgroup>
+    </select></p>
+    <p><label for="idesc">Especificações técnicas:</label>
+    <textarea name="desc" id="idesc" cols="70" rows="10" minlength="20" maxlength="100"></textarea></p>
+    <p><label for="iprof">Profissão:</label>
+    <input type="text" name="prof" id="iprof" list="lstprof">
+    <datalist id="lstprof">
+        <optgroup label="Negócios"></optgroup>
+            <option value="Administrador"></option>
+            <option value="Contabilista"></option>
+            <option value="Gestor de RH"></option>
+        </optgroup>
+        <optgroup label="Artes e Design">
+            <option value="Animador"></option>
+            <option value="Ator"></option>
+            <option value="Fotógrafo"></option>
+        </optgroup>
+        <optgroup label="Ciências Exatas">
+            <option value="Analista de Sistemas"></option>
+            <option value="Estatistico"></option>
+            <option value="Matemático"></option>
+        </optgroup>
+        <optgroup label="Ciências Humanas">
+            <option value="Advogado"></option>
+            <option value="Linguista"></option>
+            <option value="Professor"></option>
+        </optgroup>
+    </datalist></p>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Redefinir">
+    </form>
+
+    <!--Da linha 12 até 24, criamos uma lista do tipo dropdown. Tudo começa, criando a tag <select> e dando a ela a identificação atraves do id e do name. Cada uma das opções devem vir entre <select> e </select>. As opções tambem podem ser agrupadas em <optgroup>, separando-as por assunto caso seja necessario. Se não for preciso pode colocar todos os <option> dentro do <select>.
+        
+    Cada <option> tem seu value, que é o valor que sera enviado caso o visitante escolha essa opção.
+        
+    Nas linhas 25 e 26, temos uma área de texto que vai aceitas multiplas linhas. Nesse caso, os parâmetros Rows e Cols definem respectivamente em quantas linhas e colunas o conteudo será exibido.
+    
+    O ultimo elemento temos um formulario uma caixa de text comum definida nas linhas 27 e 28. A unica diferença é a presença do atributo List, que vai apontar para uma <datalist> que esta sendo criada logo abaixo, no intervalo que vai da linha 29 até 50.
+        
+    Assim como <select>, uma <datalist> tambem pode conter varios <option> em seu interior. Visualmente, a caixa de texto vai aceitar qualquer valor personalizado, mas sempre vai sugerir os valores ja definidos dentro das <option>, inclusive filtrando os valores exibidos conforme vamos digitando o conteudo da caixa de texto-->
+</body>
+</html>

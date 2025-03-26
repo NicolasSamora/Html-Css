@@ -6,7 +6,7 @@
     <title>As multiplas faces do input</title>
 </head>
 <body>
-    <form action="cadastro.js" method="post" autocomplete="on">
+    <form action="cadastro.js" method="get" autocomplete="on">
         <p><label for="ifoto">Foto de Perfil: </label><input type="file" name="foto" id="ifoto" accept="image/*"></p> 
         <!-- Campo do tipo file, para o visitante fazer upload de arquivos em qual quer formato. O atributo accept para limitar o upload a arquivos de imagem.-->
 
@@ -36,13 +36,13 @@
         
         [0-9] {4} O numero se encerra com 4 digitos entre 0 e 9-->
 
-        <p><label for="imail">E-mail: </label><input type="email" name="email" id="imail" size="30" maxlength="50" required autocomplete="email"></p>
+        <p><label for="imail">E-mail: </label><input type="email" name="email" id="imail" size="30" maxlength="50" autocomplete="email"></p>
         <!--Campo do tipo email , ele vai exigir o uso do "@" se não, não sera valido. O maxlenght configura o tamanho maximo de caracteres que pode ter. O size configura o tamanho da caixa para exibir tantas caracteres por vez (nesse caso 30)-->
 
-        <p><label for="isenha">Senha: </label><input type="password" name="senha" id="isenha" minlength="3" maxlength="8" size="8" required autocomplete="current-password"></p>
+        <p><label for="isenha">Senha: </label><input type="password" name="senha" id="isenha" minlength="3" maxlength="8" size="8" autocomplete="current-password"></p>
         <!--Campo do tipo password, os atributos minlenght e maxlenght vão indicar que a senha vai ter entre (nesse caso 3 e 8) caracteres-->
 
-        <p><label for="imes">Mês: </label><input type="month" name="mes" id="imes" required autocomplete="bday-month"></p>
+        <p><label for="imes">Mês: </label><input type="month" name="mes" id="imes" autocomplete="bday-month"></p>
         <!--Campo do tipo month, para criar um formulario pra escolher o mes e ano-->
 
         <p><label for="idata">Data da compra: </label><input type="date" name="data" id="idata"></p>
@@ -57,7 +57,7 @@
         <p><label for="isat">Nivel de Satisfação: </label><input type="range" name="sat" id="isat" min="0" max="5" value="0"></p>
         <!--Campo do tipo range, exibido como uma pequena barra horizontal com um controle deslizante. Os atributos max e min para definir os limites e o value para indicar qual sera o valor inicial-->
 
-        <p><label for="iaceito">Aceito os <a href="termos.html"></a>Termos de uso</label><input type="checkbox" name="aceito" id="iaceito" required></p>
+        <p><label for="iaceito">Aceito os <a href="termos.html"></a>Termos de uso</label><input type="checkbox" name="aceito" id="iaceito" ></p>
         <!--Campo do tipo checkbox, que se diferem dos botões de radio porque podem ter varios itens selecionados dentro de um mesmo grupo-->
 
         <p><input type="submit" value="Enviar"></p>
