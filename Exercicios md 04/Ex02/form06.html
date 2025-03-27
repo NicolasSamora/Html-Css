@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerando saidas rapidas com Output</title>
+</head>
+<body>
+    <form action="cadastro.js" method="get" oninput="itot.value = Number(iprec.value) * Number(iquant.value)">
+        <p><label for="iprod">Produto: </label><input type="text" name="prod" id="iprod"></p>
+        <p><label for="iprec">Preço: R$ </label><input type="number" name="prec" id="iprec"></p>
+        <p><label for="iquant">Quantidade: </label><input type="number" name="quant" id="iquant"></p>
+        <p><label for="itot">Total: R$ </label><output name="tot" id="itot">0</output></p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+
+    <!--A unica novidade que temos nesse código é na linha 13, onde temos um campo de saida que não pode ser editado pelo visitante e sequer será enviado pelo formulário. O seu objetivo é manipular o conteudo atrávez de instruções simples.
+    
+    E sua instrução será calcular o total, pegando o preço e multiplicando pela quantidade, e para fazer isso iremos pegar o valor de cada id transfomado em numero, o que ficaria: itot.value = Number(iprec.value) * Number(iqaunt.value 
+    
+    A forma de "ler" a linha acima é: "O valor dentro do total (itot) recebe (=) o valor do preço (iprec) convertido para numero multiplicado (*) pelo valor da quantidade (iquant) convertido em numero")
+    
+    Esse código vai no atributo oninput que fica no <form>. Com isso o total será calculado automaticamente, assim que digitarmos o preço e quantidade-->
+</body>
+</html>
