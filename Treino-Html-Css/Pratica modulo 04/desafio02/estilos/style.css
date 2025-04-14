@@ -31,16 +31,27 @@ main {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
     background-color: white;
     width: 250px;
     height: 500px;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);
+
+    /* Para não ter problema com incompatibilidade com animação ou com transform, coloque eles sempre nas ultimas linhas do seletor */
+    transform: translate(-50%, -50%);
     transition: width 0.3s, height 0.3s;
     transition-timing-function: ease; /* Usado para deixar a animação mais fluida */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 0.8em;
+    margin: 10px 0px;
 }
 
 #formulario {
@@ -48,14 +59,96 @@ main {
     padding: 10px;
 }
 
+form > .campo {
+    display: block;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid black;
+    margin: 5px 0px;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.campo > label {
+    display: none;
+}
+
+.campo > span {
+    color: white;
+    font-size: 1.9em;
+    width: 40px; /* largura do campo */
+    padding: 5px; /* centralizando o icone */
+}
+
+.campo > input {
+    background-color: rgb(221, 201, 182);
+    font-size: 1em;
+    width: calc(100% - 45px); /* calculo da largura do input menos a do campo, pois com o aumento de 1em do input ele acaba quebrando se só colocar 100% de largura no input */
+    border: 0px;
+    border-radius: 8px;
+    padding: 6px;
+    transform: translateY(-12px); /* tranlateY fazer um translate só pra cima sem precisar fazer em tudo */
+}
+
+.campo > input:focus-within { /* usado para que o campo que for ser utilizado tenha um foco, que vai ser a configuração que vc colocou */
+    background-color: white;
+}
+
+input[type=submit] {
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(155, 139, 124);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+form > a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgb(155, 139, 124);
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border-radius: 8px;
+    padding-top: 10px;
+    margin-top: 5px;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+form > a.botao > span {
+    font-size: 0.8em;
+}
+
+a.botao:hover {
+    background-color: rgb(228, 209, 193);
+}
+
+input[type=submit]:hover {
+    background-color: rgb(107, 98, 90);
+    color: white;
+}
 @media screen and (orientation: landscape) {
     #login {
         width: 90vw;
-        height: 70vh;
+        height: 60vh;
+    }
+
+    #formulario {
+        float: right;
+        height: 70%;
+        width: 60%;
     }
 
     #imagem {
-        height: 150px;
+        height: 100%;
+        width: 40%;
+        float: left;
     }
 }
 
