@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/style.css">
+    <title>Replica tela de login Crunchyroll</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div id="logo">Crunchyroll</div>
+            <h1>Login</h1>
+            <form action="formulario.js" method="post">
+                <div class="campo">
+                    <label for="imail"></label>
+                        <input type="email" name="email" id="imail" maxlength="30" required autocomplete="email" placeholder="Email:">
+                </div>
+                <div class="campo">
+                    <label for="itel"></label>
+                        <input type="tel" name="tel" id="itel" required pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(XX)XXXX-XXXX">
+                </div>
+                <input type="submit" value="PRÓXIMO">
+            </form>
+            <div class="links">
+                <a href="esqueci.html">ESQUECEU A SENHA?</a>
+                <a href="criar.html">CRIAR CONTA</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
