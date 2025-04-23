@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro contato com Flexible Box</title>
+    <STyle>
+        div#container {
+            background-color: lightblue; /* background não esta aparecendo por conta da largura da div que muito grande */
+
+            display: flex; /* Container flexivel */
+
+            /* flex-direction: row; Direção padrão(Horizontal) */
+            /* flex-direction: row-reverse; Direção inversa(Horizontal) */
+            /* flex-direction: column; Direção Vertical(Coluna) */
+            /* flex-direction: column-reverse; Direção inversa(Coluna) */
+        }
+        div.itens {
+            background-color: lightseagreen;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+        }
+    </STyle>
+</head>
+<body>
+    <div id="container">
+        <div class="itens">A</div>
+        <div class="itens">B</div>
+        <div class="itens">C</div>
+        <div class="itens">D</div>
+        <div class="itens">E</div>
+        <div class="itens">F</div>
+    </div>
+</body>
+</html>
