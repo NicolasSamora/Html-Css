@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empacotamento(wrap) e fluxos</title>
+    <STyle>
+        div#container {
+            background-color: lightblue;
+
+            display: flex; /* Container flexivel */
+
+            /* flex-direction: row; Direção padrão(Horizontal) */
+            /* flex-direction: row-reverse; Direção inversa(Horizontal) */
+            /* flex-direction: column; Direção Vertical(Coluna) */
+            /* flex-direction: column-reverse; Direção inversa(Coluna) */
+
+            /* flex-wrap: nowrap; Configuração padrão(Não tem deslocamento) */
+            /* flex-wrap: wrap; Configuração com deslocamento(Vai depender da direção e do Cross-Axis. */
+            /* flex-wrap: wrap-reverse; Configuração com deslocamento, porem, com deslocamento inverso ao Cross-Axis */
+
+            /* flex-flow é uma shorthand um junção do flex-direction + flex-wrap */
+        }
+        div.itens {
+            background-color: lightseagreen;
+            border: 1px solid black;
+            text-align: center;
+            flex: auto;
+        }
+    </STyle>
+</head>
+<body>
+    <div id="container">
+        <div class="itens">Exemplo de bloco A</div>
+        <div class="itens">Exemplo de bloco B</div>
+        <div class="itens">Exemplo de bloco C</div>
+        <div class="itens">Exemplo de bloco D</div>
+        <div class="itens">Exemplo de bloco E</div>
+        <div class="itens">Exemplo de bloco F</div>
+    </div>
+</body>
+</html>
