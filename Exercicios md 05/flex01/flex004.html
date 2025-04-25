@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento nos eixos Flexbox</title>
+    <STyle>
+        div#container {
+            background-color: lightblue; 
+
+            display: flex; /* Container flexivel */
+            flex-flow: row nowrap;
+            height: 300px;
+
+            /*justify-content: flex-start; Valor padrão, os itens vão ficar no main-start */
+
+            /*justify-content: flex-end; Os itens vão ficar no main-end */
+
+            /*justify-content: center; Os itens vão ficar no meio do conteiner centralizados */
+
+            /*justify-content: space-between; O primeiro item vai ficar no main-start e o ultimo vai ficar no main-end ficando calculando os espaços entre eles */
+
+            /*justify-content: space-evenly; O espaço entre os itens será o mesmo para todos */
+
+            /*justify-content: space-around; Ele vai pegar o espaço do container e vai dividir esses espaços pela quantidade de itens em espaços iguais e vai centralizar os itens dentro desse quadrado imaginario */
+
+            /*--------------------------------------------------------------------------------------------------------------------------------*/
+
+            /*align-items: stretch; Valor padrão, os itens vão "esticar" */
+
+            /*align-items: flex-start; Os itens vão ficar no cross-start */
+
+            /*align-items: flex-end; Os itens vão ficar no cross-end */
+
+            /*align-items: center; Os itens vão ficar entre o cross-star e o cross-end, ou seja no centro */
+        }
+        div.itens {
+            background-color: lightseagreen;
+            border: 1px solid black;
+            text-align: center; 
+        }
+    </STyle>
+</head>
+<body>
+    <div id="container">
+        <div class="itens">A</div>
+        <div class="itens">B</div>
+        <div class="itens">C</div>
+        <div class="itens">D</div>
+        <div class="itens">E</div>
+        <div class="itens">F</div>
+    </div>
+</body>
+</html>
