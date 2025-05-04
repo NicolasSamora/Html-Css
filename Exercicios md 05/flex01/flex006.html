@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento de elementos empacotados no flexbox</title>
+    <STyle>
+        div#container {
+            background-color: lightblue;
+
+            display: flex; 
+            flex-flow: row wrap;
+            height: 400px;
+            align-content: space-around;
+
+            /*align-content: stretch; Valor padrão, os itens vão quebrar e esticar */
+
+            /*align-content: flex-start; Vai grudar os itens no cross-start */
+
+            /*align-content: flex-end; Vai grudar os itens no cross-end */
+
+            /*align-content: center; Vai centralizar os itens entre o cross-start e cross-end */
+
+            /*align-content: space-between; Os primeiros itens vão ficar no cross-start e os ultimos no cross-end, os outros itens vão ficar centralizados com um espaçamento igual entre eles */
+
+            /*align-content: space-evenly; Antes e depois dos itens terá o espaçamento igual */
+
+            /*align-content: space-around; O cross-start e o cross-end vão ter um espaçamento simples(os itens vão ficar mais perto deles) e entre eles o espaçamento vai ser duplo */
+
+        }
+        div.itens {
+            background-color: lightseagreen;
+            border: 1px solid black;
+            text-align: center;
+            padding: 40px;
+        }
+    </STyle>
+</head>
+<body>
+    <div id="container">
+        <div class="itens">A</div>
+        <div class="itens">B</div>
+        <div class="itens">C</div>
+        <div class="itens">D</div>
+        <div class="itens">E</div>
+        <div class="itens">F</div>
+        <div class="itens">G</div>
+        <div class="itens">H</div>
+        <div class="itens">I</div>
+        <div class="itens">J</div>
+        <div class="itens">K</div>
+        <div class="itens">L</div>
+    </div>
+</body>
+</html>
