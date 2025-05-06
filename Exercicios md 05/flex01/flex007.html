@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomia dos itens flexbox: Order</title>
+    <STyle>
+        div#container {
+            background-color: lightblue; 
+
+            display: flex; 
+        }
+        div.itens {
+            background-color: lightseagreen;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+            
+        }
+        /*Os itens serão posicionado em ordem crecente(do menor pro maior) e os numeros iguais serão posicionado de acordo com quem foi colocado primeiro no html */
+        #i1 {
+            order: 7;
+        }
+        #i2 {
+            order: 1;
+        }
+        #i3 {
+            order: -6;
+        }
+        #i4 {
+            order: -4;
+        }
+        #i5 {
+            order: 3;
+        }
+        #i6 {
+            order: 1;
+        }
+    </STyle>
+</head>
+<body>
+    <div id="container">
+        <div class="itens" id="i1">A</div>
+        <div class="itens" id="i2">B</div>
+        <div class="itens" id="i3">C</div>
+        <div class="itens" id="i4">D</div>
+        <div class="itens" id="i5">E</div>
+        <div class="itens" id="i6">F</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anatomia dos itens flexbox: Aling-self</title>
+    <STyle>
+        div#container {
+            background-color: lightblue; 
+            height: 400px;
+            display: flex; 
+        }
+        div.itens {
+            background-color: lightseagreen;
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #i1 {
+            align-self: center; /*Posicionado entre o cross-start e o cross-end */
+        }
+        #i2 {
+            align-self: stretch; /*Posicionamento ocupando todo o cross-axis*/
+        }
+        #i3 {
+            align-self: flex-end; /*Posicionado no cross-end */
+        }
+        #i4 {
+            align-self: flex-start; /*Posicionado no cross-start*/
+        }
+        #i5 {
+            align-self: auto; /*Valor herdado do pai */
+        }
+    </STyle>
+</head>
+<body>
+    <div id="container">
+        <div class="itens" id="i1">A</div>
+        <div class="itens" id="i2">B</div>
+        <div class="itens" id="i3">C</div>
+        <div class="itens" id="i4">D</div>
+        <div class="itens" id="i5">E</div>
+    </div>
+</body>
+</html>
