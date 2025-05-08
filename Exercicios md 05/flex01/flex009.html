@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade flex-basis em flexbox</title>
+    <STyle>
+        div#container {
+            background-color: lightblue; 
+
+            display: flex; 
+            flex-flow: row nowrap;
+        }
+        div.itens {
+            background-color: lightseagreen;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+            
+
+            /*flex-basis: auto; Valor padrão, o item vai se adptar automaticamente ao conteudo */
+            
+            /*flex-basis: 150px; 150px não é um valor fixo, vai ficar 150px até o elemento não caber mais no container, quando não couber ele vai quebrar ou esticar até caber todo o conteudo */
+
+        }
+    </STyle>
+</head>
+<body>
+    <div id="container">
+        <div class="itens">A</div>
+        <div class="itens">BBBBBBBBBBB</div>
+        <div class="itens">C</div>
+        <div class="itens">DDDDDDDDDDDDDDDD</div>
+        <div class="itens">E</div>
+        <div class="itens">FFFFFFFFFFFFFFFFFFFFFF</div>
+    </div>
+</body>
+</html>
