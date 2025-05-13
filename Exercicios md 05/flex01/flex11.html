@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle do tamanho de itens flexiveis </title>
+    <STyle>
+        div#container {
+            background-color: lightblue; 
+            display: flex; 
+            flex-flow: row nowrap;
+            width: 600px;
+        }
+        div.itens {
+            background-color: lightseagreen;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 130px;
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+        #c1 {
+            flex-grow: 0;
+            flex-shrink: 1;
+        }
+        #c2 {
+            flex-grow: 2;
+            flex-shrink: 0;
+        }
+        #c3 {
+            flex-grow: 1;
+            flex-shrink: 2;
+        }
+    </STyle>
+</head>
+<body>
+    <div id="container">
+        <div class="itens" id="c1">A</div>
+        <div class="itens" id="c2">B</div>
+        <div class="itens" id="c3">C</div>
+    </div>
+</body>
+<!--
+Calculo da proporção
+
+Exemplo:
+
+Contêiner: 600px
+Item 1: flex-basis: 150px, flex-grow: 1
+Item 2: flex-basis: 150px, flex-grow: 2
+Item 3: flex-basis: 150px, flex-grow: 0
+
+O tamanho total dos itens é a soma entre eles (px): 
+150px + 150px + 150px = 450px. 
+
+Como o contêiner tem 600px, o espaço vazio é:
+600px - 450px = 150px 
+
+Agora, vamos calcular em quantas partes o espaço vazio será dividido (flex-grow):
+Item 1: 1 parte
+Item 2: 2 partes
+Total: 3 partes (soma entre os itens)
+
+O item 1 crescerá em 1/3 dos 150px, ou seja, uma parte de três, adicionando 50px
+O item 2 crescerá em 2/3 dos 150px, ou seja, duas partes de três, adicionando 100px
+
+Tamanho total dos itens:
+item 1 = 150px + 50px = 200px
+item 2 = 150px + 100px = 250px
+
+Outro exemplo:
+
+Contêiner: 600px
+Item 1: flex-basis: 100px, flex-grow: 3
+Item 2: flex-basis: 50px, flex-grow: 1
+Item 3: flex-basis: 100px, flex-grow: 2
+
+O tamanho total dos itens é a soma entre eles (px): 
+600px - 250px , o espaço vazio é 350px 
+
+Vamos calcular em quantas partes o espaço vazio será dividido (flex-grow):
+Item 1: 3 partes
+Item 2: 1 parte
+Item 3: 2 partes
+Total: 6 partes (soma entre os itens)
+
+O item 1 crescerá em 3/6 dos 350px, ou seja, uma parte de seis, adicionando 175px.
+O item 2 crescerá em 1/6 dos 350px, ou seja, duas partes de seis, adicionando 58px
+O item 3 crescerá em 2/6 dos 350px, ou seja, três partes de seis, adicionando 116px
+
+Tamanho total dos itens:
+item 1 = 100px + 175px = 275px
+item 2 = 50px + 58px = 108px
+item 2 = 100px + 116px = 216px
+
+O cálculo para encontrar as partes é simples: divida o valor total do espaço vazio (350px) pelo total de partes (6). neste caso o resultado foi 58,33px por parte. Em seguida, multiplique as partes atribuídas a cada item por esse valor:
+
+item1 = 3 x 58,33 = 175
+item 2 = 1 x 58,33 = 58
+item 3 = 2 x 58,33 = 116
+-->
+</html>
+
