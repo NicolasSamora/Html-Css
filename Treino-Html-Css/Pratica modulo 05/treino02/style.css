@@ -53,12 +53,11 @@ p, h2 {
 .midia > img {
     display: block;
     margin: auto;
-    width: 3;
 }
 
 .midia > iframe {
     display: block;
-    width: 90%;
+    width: 86%;
     margin: auto;
 }
 
