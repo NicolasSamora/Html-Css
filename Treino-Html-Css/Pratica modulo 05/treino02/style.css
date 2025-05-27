@@ -17,7 +17,7 @@ header, .normal {
     background-color: rgb(172, 172, 172);
 }
 
-p, h1, h2 {
+p, h2 {
     margin-bottom: 10px;
     text-align: justify;
 }
@@ -25,4 +25,42 @@ p, h1, h2 {
 .flex-content {
     padding: 20px;
     background-color: rgba(211, 211, 211, 0.164);
+
+    display: flex;
+    flex-flow: column nowrap;
 }
+
+.image-text {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    justify-content: space-between;
+}
+
+.text-video {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.text {
+    flex: 1 1 500px;
+}
+
+.midia {
+    flex: 1 0 500px;
+}
+
+.midia > img {
+    display: block;
+    margin: auto;
+    width: 3;
+}
+
+.midia > iframe {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+
+
