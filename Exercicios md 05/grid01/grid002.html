@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedade de container para grids</title>
+    <style>
+        .container {
+            border: 3px solid blue;
+            display: grid;
+            
+            grid-template-columns: 2fr 3fr 1fr;
+            grid-template-rows: 80px 80px 80px;
+            gap: 5px;
+            /*Configuração normal: 
+            grid-template-columns: auto auto auto; 
+            grid-template-rows: 80px 80px 80px; 
+            
+            Forma simplificada: 
+            grid-template: repeat(3, 80px) / repeat(3, auto);
+            */
+            
+
+            place-items: normal normal;
+            place-content: normal normal;
+            /*Configuração normal para items: 
+            align-items: start;
+            justify-items: end;
+            .
+            Forma simplificada:
+            place-items: start, end;
+            .
+            Configuração normal para content:
+            justify-content: center;
+            align-content: space-evenly;
+            .
+            Forma simplificada:
+            place-content: space-evenly center;
+            */
+        
+
+            grid-auto-rows: 80px;
+            /*Grid-auto-rows: È usado para que quando uma linha nova for inserida ela automaticamente fique com o mesmo valor das outras.*/
+            grid-auto-columns: 1fr;
+            /*Grid-auto-columns: È a mesma coisa do auto-rows sua unica diferença é que agora vai ser configurado as colunas mas a funcionalidade é a mesma*/
+
+            grid-auto-flow: row;
+            /*Grid-auto-flow:row 
+            Por padrão seu valor é ROW que significa que todo novo item que for inserido na grade vai ser na posição ROW em linha
+            .
+            Grid-auto-flow:column
+            Com esse valor todo novo item inserido na grade vai ser na posição de column*/
+            
+        }
+
+        .item {
+            border: 3px solid rgb(85, 126, 23);
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+    </div>
+</body>
+</html>
