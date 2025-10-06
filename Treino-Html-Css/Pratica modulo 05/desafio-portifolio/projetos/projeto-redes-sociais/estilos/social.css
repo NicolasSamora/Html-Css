@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar { /* Webkit-scrollbar usado para "tirar" as barras de rolagem, tanto horizontal quanto    vertical (O webkit esconde as barras, fazendo com que tenha o rolamento, mas sem aparecer as barras, diferente do overflow que realmente tira as barras)*/
+    
+    width: 0px;
+    height: 0px;
+}
+
+img {
+    width: 100vw;
+}
+
+a {
+    display: block; /* Display block, para que o "ACESSE" fique em baixo da imagem e não do lado quebrando o site */
+
+    background-color: darkred;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bolder;
+    padding: 20px;
+}
+
+a:hover {
+    background-color: red;
+}

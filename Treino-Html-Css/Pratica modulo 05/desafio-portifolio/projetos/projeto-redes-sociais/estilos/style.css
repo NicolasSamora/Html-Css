@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: url(../pacote-d013/imagens/fundo-madeira.jpg) no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    position: relative; /* Posição relativa para mexer na posição do celular */
+
+    min-height: 100vh;
+}
+
+#telefone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    transform: translate(-50%, -50%); /* Translate, para posicionar o celular no centro da tela, invertendo os valores para negativo */
+
+    background: url(../pacote-d013/imagens/frame-iphone.png) no-repeat;
+    width: 311px;
+    height: 627px;
+}
+
+#tela {
+    position: absolute; /* Posição absolute para mexer na posição da imagem da tela principal do celular */
+
+    top: 81px;
+    left: 22px;
+
+    width: 267px;
+    height: 471px;
+}
+
+#social {
+    text-align: right; /* Mudar a posição dos icones das redes sociais */
+}
+
+#social img {
+    width: 50px;
+    margin: 7px;
+
+    border-radius: 50%; /* Border radius de 50% para deixar a imagem redonda (a imagem não precisa ser redonda pra isso) */
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.377);
+
+    box-sizing: border-box; /* Usado para que ao clicar no link os outros icones não desloque de seu lugar, fazendo com que a borda faça parte da caixa da imagem*/
+}
+
+#social img:hover {
+    border: 1px solid rgba(255, 255, 255, 0.767);
+
+    transform: translate(-6px, -6px); /* Trasnlate usado para modificar a posiçao dos icones ao passar o mouse, fazendo com que ao passar o mouse, os icones "voltam" 6px pra cima e pra esquerda */
+
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.521);
+    transition: transform .3s; /* Duração da animação do transform */
+}

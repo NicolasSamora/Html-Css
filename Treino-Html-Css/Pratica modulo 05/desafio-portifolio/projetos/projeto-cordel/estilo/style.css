@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kavivanar&family=Passion+One:wght@400;700;900&family=Patrick+Hand&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kavivanar&family=Passion+One:wght@400;700;900&family=Patrick+Hand&family=Sriracha&display=swap');
+
+:root {
+    --font01: Verdana, Geneva, Tahoma, sans-serif;
+    --font02: 'Passion One', cursive;
+    --font03: "Sriracha", serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh; /* Pegar 100% da viewport (Do inicio do conteudo até o final sem sobra) */
+    background-color: rgb(184, 181, 181);
+    font-family: var(--font01);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /* Transforma as letras em maiusculas e aumenta as letras iniciais */
+
+    /* text-transform: uppercase; Trasnforma as letras em maiusculas */ 
+}
+
+header p {
+    padding-bottom: 50px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding-top: 10vh; /* Padding-top e bottom ocupando 10% da view height da section */
+    padding-bottom: 10vh;
+    line-height: 2em; /* Dar um espaço entre as frases multiplicando seu "espaço" com em */
+    padding-left: 30px; /* Padding usado para que o conteudo não fique no canto da tela */
+    font-family: var(--font03);
+    font-size: 3.5vw; /* Font adaptada para que ocupe 3.5% da largura da tela, fazendo com que as letras fiquem responsivas de acordo com o tamanho da tela */
+}
+
+section p {
+    padding-bottom: 2em; /* padding dos paragrafos aumentado 2x o tamanho original */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.normal {
+    background-color: white;
+    color: black;
+}
+
+.imagem {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.24); /* sombra pra dentro da imagem */ 
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.imagem p {
+    background-color: rgba(0, 0, 0, 0.192);
+    display: inline-block; /* inline-level para que o background ocupe apenas o tamanho da estrofe */
+    padding: 7px;
+    text-shadow: 1px 1px 0px black;
+}
+
+#img01 {
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center;
+}
+
+#img02 {
+    background-image: url(../imagens/background002.jpg);
+    background-position: right center;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
