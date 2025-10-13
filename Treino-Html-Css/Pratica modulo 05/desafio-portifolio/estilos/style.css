@@ -34,6 +34,8 @@ header {
   display: flex;
   justify-content: flex-end;
   align-content: center;
+  position: sticky;
+  top: 0;
   background-color: var(--destaque);
   color: var(--texto);
   padding: 10px;
